@@ -1,0 +1,2024 @@
+
+/*
+PORTFOLIO - DORNSTETTER Morgane
+*/
+
+
+/* SOMMAIRE
+==================================================
+#PORTFOLIO
+#HEADER	
+#MENU 
+#FEATURED SLIDER 
+#SERVICE 
+#CONTACT
+#FOOTER
+#RESPONSIVE STYLE
+*/
+
+
+/** PORTFOLIO **/
+
+form{
+padding:0px;
+}
+
+#lol{
+text-align:center;
+color:#593875;
+margin-top:20px;
+font-size:60px;
+}
+
+
+#logo{
+margin-top:-6px;
+}
+.titleport{
+font-family:'Alegreya Sans SC', sans-serif;
+font-size:50px;
+color:#339999;
+text-align:center;
+}
+.portfolio {
+display: flex; 
+min-width: 400px;
+max-width: 1000px;
+height: 400px;
+margin: 6rem auto;
+}
+.image {
+min-width: 60px;
+margin: 10px;
+cursor: pointer;
+transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+overflow: visible;
+position: relative;
+}
+.image.active {
+flex-grow: 100;
+max-width: 600px;
+margin: 0px;
+border-radius: 7px;
+}
+.image:not(.active){
+flex-grow: 1;
+border-radius: 5px;
+}
+.text-container {
+width: 100%;
+height: 400px;
+padding: 2rem;
+visibility: hidden;
+transform: translateY(300px);
+opacity: 1;
+transition: all .4s ease;
+background: linear-gradient(354deg, #593875 0%, transparent 70%);
+color: white;
+overflow: hidden;
+}
+.text {
+position: absolute;
+bottom: 5rem;
+}
+.active .text-container {
+visibility: visible;
+transform: translateY(0px);
+opacity: 1;
+}
+
+
+body,
+html {
+overflow-x:hidden;
+}
+
+body {
+font-family: 'Raleway';
+font-size: 15px;
+letter-spacing: 0.5px;
+line-height: 1.5;
+color: #1c1b1b;
+background-color:#FAE9F3;
+}
+
+ul {
+padding: 0;
+margin: 0;
+}
+
+ul li {
+list-style: disc;
+font-size: 17px;
+line-height: 1.59;
+}
+
+a { 
+text-decoration: none;
+color:#593875;
+}
+
+a:hover,
+a:focus {
+outline: none;
+text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: 'Alegreya Sans SC', sans-serif;
+font-weight: 700;
+margin-top: 0;
+}
+
+
+h1 {
+font-size: 38px;
+}
+
+h2 {  
+font-size: 32px; 
+line-height: 1.13; 
+}
+
+h3 {  
+font-size: 26px;  
+}
+
+h4 {  
+font-size: 22px;  
+}
+
+h5 {  
+font-size: 20px;  
+}
+
+h6 {  
+font-size: 18px;  
+}
+
+img {
+border: none;
+max-width: 100%;
+}
+
+code {
+background-color: #ee6e73;
+border-radius: 2px;
+color: #fff;
+padding: 2px 4px;
+}
+
+pre {
+background-color: #f8f8f8;
+border: 1px solid #eee;
+border-radius: 4px;
+padding: 10px;
+}
+
+pre code {
+background-color: transparent;
+color: #333;
+}
+
+del{
+text-decoration-color: #ee6e73;
+}
+
+kbd {
+background-color: #FAE9F3;
+padding: 4px 6px;
+border-radius: 2px;
+}
+
+address {
+line-height: 1.5;
+padding-left: 10px;
+}
+
+dl dt {
+font-weight: 700;
+}
+
+dl dd {
+margin-left: 0;
+}
+
+blockquote {
+background-color: #f8f8f8;
+border-radius: 0 4px 4px 0;
+padding: 5px 15px;
+
+}
+
+blockquote p {
+margin-top: 10px;
+}
+
+button {
+padding: 5px 15px;
+border: none;
+}
+
+button:focus {
+outline: none;
+border: none;
+}
+
+/*Wordpress default class*/
+
+.alignleft {
+float:left;
+margin-right:8px;
+}
+
+.aligncenter {
+display:block;
+margin:10px auto;
+}
+
+.alignright {
+float:right;
+margin-left:8px;
+}		
+
+.alignnone {
+max-width: 100%;
+}
+
+.wp-caption-text {
+font-size: 12px;
+font-style: italic;
+text-align: center;
+}
+
+/* ========= BUTTON =========*/
+
+.mu-primary-btn {
+background-color: transparent;
+border-radius: 4px;
+border: 2px solid #ffffff;
+color: #fff;
+display: inline-block;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 1.5px;
+padding: 12px 35px;
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+}
+
+.mu-primary-btn:hover,
+.mu-primary-btn:focus {
+background-color: #fff;
+}
+
+.mu-send-msg-btn {
+border-radius: 4px;
+border: 1px solid #888;
+background-color: transparent;
+color: #555;
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 1px;
+text-align: center;
+padding: 14px 24px;
+margin-top: 10px;
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+width: 130px;
+}
+
+.mu-send-msg-btn:hover,
+.mu-send-msg-btn:focus {
+background-color: #fff;
+}
+
+
+
+/*--------------------*/
+/* HEADER */
+/*--------------------*/
+
+#mu-header {
+display: inline;
+float: left;
+width: 100%;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+padding: 18px 0;
+z-index: 999;
+transition: all 0.5s;
+background:#593875;
+height:105px;
+}
+
+.navbar-default .navbar-brand, 
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+color: #fff;
+font-size: 40px;
+font-family: 'Alegreya Sans SC', sans-serif;
+margin-top: 0;
+width: 120px;
+line-height: 18px;
+}
+
+.navbar-brand img {
+margin-top: -18px;
+height:90px;
+width:315px;
+}
+
+#mu-header.mu-fixed-nav {
+width: 100%;
+position: fixed;
+padding: 15px 0;
+background-color:#593875;
+}
+
+
+/*--------------------*/
+/* MENU */
+/*--------------------*/
+
+.mu-navbar {
+background-color: transparent;
+border: none;
+border-radius: 0;
+margin-bottom: 0;
+
+}
+
+.mu-menu {
+margin-top: 4px;
+}
+
+.navbar-default .mu-menu li a {
+color: #fff;
+font-size: 18px;
+font-weight: 400;
+padding: 0;
+margin: 10px 15px;
+transition: all 0.5s;
+position: relative;
+}
+
+.navbar-default .mu-menu li a::after {
+background-color: #fff;
+content: '';
+height: 2px;
+width: 100%;
+position: absolute;
+bottom: -5px;
+left: 0;
+transform: scale(0);
+transition: all 0.5s;
+}
+
+.navbar-default .mu-menu li a:hover,
+.navbar-default .mu-menu li a:focus,
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover {
+background-color: transparent;
+color: #fff;
+}
+
+.navbar-default .mu-menu li a:hover::after,
+.navbar-default .mu-menu li a:focus::after,
+.navbar-default .navbar-nav > .active > a:focus::after, 
+.navbar-default .navbar-nav > .active > a:hover::after {
+transform: scale(1);
+}
+
+
+/*--------------------*/
+/* FEATURED SLIDER */
+/*--------------------*/
+
+#mu-featured-slider {
+background-attachment: fixed;
+background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+background-size:100%;
+display: inline;
+float: left;
+width: 100%;
+		
+}
+
+
+
+.mu-featured-area {
+display: inline;
+float: left;
+width: 100%;
+padding: 28% 10%;
+text-align: center;
+}
+
+.mu-featured-area h1 {
+font-size: 60px;
+color: #fff;
+font-weight: 700;
+margin-bottom: 0;
+line-height: 1;
+}
+
+.mu-featured-slider-wrapper {
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-featured-slider {
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-featured-slider p,
+#typed {
+color: #fff;
+font-size: 30px;
+font-weight: 300;
+}
+
+.mu-featured-slider span,
+#typed span,
+.typed-cursor {
+color: #fff;
+font-size: 30px;
+font-weight: 600;
+}
+
+.mu-featured-content {
+margin-top: 15px;
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-featured-content p{
+color: #fff;
+}
+
+.mu-featured-content a{
+margin-top: 35px;
+}
+
+
+/*--------------------*/
+/* ABOUT US */
+/*--------------------*/
+
+
+#mu-about {
+background-color: #f7f7f7;
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-about-area {
+display: inline;
+float: left;
+padding: 100px 0;
+width: 100%;
+}
+
+.mu-about-header {
+display: inline;
+float: left;
+padding: 0 120px;
+width: 100%;
+}
+
+.mu-heading-title {
+color: #1c1b1b;
+margin-bottom: 15px;
+position: relative;
+font-size:50px;
+}
+
+.mu-about-content {
+background-color: #fff;
+display: inline;
+float: left;
+margin-top: 70px;
+padding: 20px;
+width: 100%;
+}
+
+.mu-about-content-left {
+display: inline;
+float: left;
+width: 100%;
+
+}
+
+.mu-about-content-right {
+display: inline;
+float: left;
+margin-top: 20px;
+width: 100%;
+
+}
+
+.mu-skill-progress-bar {
+display: inline;
+float: left;
+width: 100%;
+
+}
+
+.mu-skill-progress-bar h3 {
+margin-top: 20px;
+color:#593875;
+}
+
+.mu-skill-progress-bar>span {
+display: block;
+margin-bottom: 5px;
+font-size: 15px;
+font-weight: 700;
+color: #A782BA;
+
+}
+
+.mu-skill-progress-bar .mu-pro-bar {
+width: 100%;
+margin-bottom: 15px;
+text-align: center;
+
+}
+
+.mu-pro-percentage {
+display: inline-block;
+padding: 5px 0;
+color: #fff;
+
+}
+
+.mu-pro-bar .progressbar {
+position: relative;
+background-color:#593875;
+}
+
+.mu-pro-bar .proggress {
+height: 24px !important;
+width: 10px;
+
+
+;
+}
+
+
+.mu-pro-bar .percentCount {
+position: absolute;
+top: 0;
+left: 48%;
+color: #fff;
+}
+
+.mu-social-media{
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-social-media h3 {
+margin-top: 20px;
+color:#593875;
+}
+
+.mu-social-media a {
+border-radius: 50%;
+display: inline-block;
+font-size: 15px;
+border: 1px solid #333;
+width: 35px;
+height: 35px;
+line-height: 32px;
+text-align: center;
+margin: 5px 5px;
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+
+}
+
+.mu-resume-btn {
+margin-top: 30px;
+display: inline-block;
+padding: 10px 15px;
+font-size: 14px;
+letter-spacing: 1px;
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+}
+
+.mu-resume-btn:hover,
+.mu-resume-btn:focus {
+	background-color:#593875;
+	color:white;
+	border-color:white;
+}
+
+
+/*--------------------*/
+/* SERVICE */
+/*--------------------*/
+
+.mod{
+width:50px;
+}
+#un
+{
+margin-bottom:5px;
+}
+#deux
+{
+margin-bottom:6px;
+
+}
+#trois
+{
+margin-bottom:10px;
+}
+#quatre
+{
+margin-bottom:5px;
+margin-right:2px;
+}
+#cinq
+{
+margin-bottom:5px;
+margin-left:4px;
+}
+#six
+{
+margin-left:5px;
+margin-bottom:4px;
+}
+
+#mu-service {
+display: inline;
+float: left;
+width: 100%;
+}
+
+
+
+.mu-service-area {
+display: inline;
+float: left;
+padding: 100px 0;
+width: 100%;
+}
+
+.mu-service-header {
+display: inline;
+float: left;
+text-align: center;
+padding: 0 120px;
+width: 100%;
+}
+
+.mu-heading-title {
+color: #1c1b1b;
+margin-bottom: 15px;
+position: relative;
+}
+
+.mu-service-content{
+display: inline;
+float: left;
+margin-top: 70px;
+width: 100%;
+
+}
+
+.mu-service-content-single {
+background-color: #f8f8f8;
+display: inline;
+float: left;
+text-align: center;
+align-items:center;
+margin-top: 15px;
+margin-bottom: 15px;
+padding: 25px 10px;
+width: 100%;
+}
+
+.mu-service-icon-box {
+font-size: 30px;
+margin-bottom: 20px;
+display: inline-block;
+border-radius: 50%;
+width: 75px;
+height: 75px;
+line-height: 75px;
+background-color:#FAE9F3;
+}
+
+.mu-service-content-single h4{
+margin-bottom: 20px;
+font-size: 20px;
+color:#339999;
+}
+
+.mu-service-content-single p {
+font-size: 14px;
+margin-bottom: 0;
+color: #555;
+letter-spacing: 0.5px;
+}
+
+
+/*--------------------*/
+/* PORTFOLIO */
+/*--------------------*/
+
+
+#mu-portfolio {
+background-color: #FAE9F3;
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-portfolio-area {
+display: inline;
+float: left;
+padding: 100px 0;
+width: 100%;
+}
+
+.mu-portfolio-header {
+display: inline;
+float: left;
+text-align: center;
+width: 100%;
+}
+
+.mu-heading-title {
+color: #593875;
+margin-bottom: 15px;
+position: relative;
+}
+
+.mu-header-dot {
+border-radius: 0;
+height: 3px;
+width: 75px;
+display: inline-block;
+margin-bottom: 20px;
+}
+
+.mu-portfolio-content{
+display: inline;
+float: left;
+margin-top: 30px;
+width: 100%;
+}
+
+.mu-portfolio-filter-area{
+display: inline;
+float: left;
+width: 100%;
+margin-top: 30px;
+}
+
+.filtr-item {
+margin-bottom: 0px;
+padding: 16px;
+}
+
+.filtr-item h4 {
+font-size: 18px;
+letter-spacing: 1px;
+}
+
+.mu-filter-item-content {
+position: absolute;
+left: 16px;
+top: 16px;
+right: 16px;
+bottom: 16px;
+color: #fff;
+padding-top: 25%;
+text-align: center;
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+opacity: 0;
+}
+
+.mu-item-thumbonail{
+display: inline;
+float: left;
+overflow: hidden;
+width: 100%;
+}
+
+.mu-item-thumbonail img{
+-webkit-transform: scale(1);
+		transform: scale(1);
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+}
+
+.filtr-item:hover .mu-item-thumbonail img {
+-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+}
+
+.filtr-item:hover .mu-filter-item-content{
+opacity: 0.94;
+}
+
+.mu-filter-link,
+.mu-filter-imglink {
+border-radius: 50%;
+background: #593875;
+color: #fff;
+height: 35px;
+padding: 0 6px;
+width: 35px;
+line-height: 35px;
+display: inline-block;
+font-size: 15px;
+margin-right: 10px;
+margin-top: 5px;
+-webkit-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+
+}
+
+.mu-filter-link:hover,
+.mu-filter-imglink:hover,
+.mu-filter-link:focus,
+.mu-filter-imglink:focus {
+background-color: #fff;
+} 
+
+
+/* Filter controls */
+
+.mu-simplefilter {
+text-align: center;
+}
+
+.mu-simplefilter li {
+color: #555;
+cursor: pointer;
+display: inline-block;
+padding: 5px;
+margin: 0 5px;
+-webkit-transition: all 0.5s;
+transition: all 0.5s;
+font-size: 16px;
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+.mu-simplefilter li:hover,
+.mu-simplefilter li.active {
+border-color: #fff;
+}
+
+
+/*--------------------*/
+/* FOOTER */
+/*--------------------*/
+
+
+#mu-footer {
+background-color:#fff;
+display: inline;
+float: left;
+width: 100%;
+}
+
+.mu-footer-area{
+display: inline;
+float: left;
+padding: 30px 0;
+text-align: center;
+width: 100%;
+}
+
+.mu-copy-right {
+margin-bottom: 0;
+}
+
+.mu-copy-right a {
+font-weight: 600;
+-webkit-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+}
+
+
+
+/*--------------------*/
+/* RESPONSIVE STYLE */
+/*--------------------*/
+
+@media (max-width: 1199px) {
+
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:15px;
+}
+header{
+	height:80px;
+}
+#typed>span{
+	font-size:18px;
+}
+
+.mu-featured-area h1
+{
+	font-size:40px;
+}
+.mu-featured-slider p, #typed
+{
+	font-size:18px;
+}
+.mu-about-content
+{
+	background-color:white;
+}
+
+.navbar-brand img {
+	width: 145px;
+	margin-top: -40px;
+}
+
+.navbar-default .mu-menu li a {
+	margin: 10px 12px 5px;
+}
+
+.mu-about-content-right {
+	margin-top: 0;
+}
+
+.mu-skill-progress-bar h3 {
+	margin-top: 0;
+}
+
+.titleport{
+	font-family:'Alegreya Sans SC', sans-serif;
+	font-size:30px;
+	color:#339999;
+	text-align:center;
+}
+.portfolio {
+	display: flex; 
+	min-width: 400px;
+	max-width: 600px;
+	height: 400px;
+	margin: 6rem auto;
+	}
+	.image {
+	min-width: 60px;
+	margin: 10px;
+	cursor: pointer;
+	transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+	overflow: hidden;
+	position: relative;
+	}
+	.image.active {
+	flex-grow: 100;
+	max-width: 600px;
+	margin: 0px;
+	border-radius: 7px;
+	}
+	.image:not(.active){
+	flex-grow: 1;
+	border-radius: 5px;
+	}
+	.text-container {
+	width: 100%;
+	height: 400px;
+	padding: 2rem;
+	visibility: hidden;
+	transform: translateY(300px);
+	opacity: 0;
+	transition: all .4s ease;
+	background: linear-gradient(354deg, black 0%, transparent 72%);
+	color: white;
+	overflow: hidden;
+	}
+	.text {
+	position: absolute;
+	bottom: 5rem;
+	}
+	.active .text-container {
+	visibility: visible;
+	transform: translateY(0px);
+	opacity: 1;
+	}
+
+
+}
+
+@media (max-width: 991px) {
+
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:15px;
+}
+
+.navbar-brand img
+{
+width:160px;
+margin-top:-40px;
+}
+
+
+.mu-header-dot{
+opacity:0;
+}
+
+.mu-about-header>p{
+margin-top:10px;
+}
+header{
+	height:60px;
+}
+
+.mu-featured-area h1{
+	font-size:40px;
+	margin-top:5px;
+}
+
+#typed{
+	font-size:18px;
+}
+#typed>span{
+	font-size:18px;
+}
+.mu-about-header>p{
+	font-size:12px;
+}
+.mu-about-header>h2
+{
+	font-size:30px;
+	margin-top:-25px;
+}
+.mu-heading-title{
+	margin-bottom:-20px;
+	font-size:30px;
+}
+.titleport{
+	font-family:'Alegreya Sans SC', sans-serif;
+	font-size:35px;
+	color:#339999;
+	text-align:center;
+	margin-bottom:15px;
+}
+.portfolio {
+	display: flex; 
+	min-width: 400px;
+	max-width: 600px;
+	justify-content:center;
+	}
+	.mu-portfolio-area
+	{
+		padding:20px 0;
+	}
+	.mu-about-area
+	{
+		padding:50px 0;
+	}
+	.image {
+	min-width: 60px;
+	margin: 10px;
+	cursor: pointer;
+	transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+	overflow: hidden;
+	position: relative;
+	}
+	.image.active {
+	flex-grow: 100;
+	max-width: 600px;
+	margin: 0px;
+	border-radius: 7px;
+	}
+	.image:not(.active){
+	flex-grow: 1;
+	border-radius: 5px;
+	}
+	.text-container {
+	width: 100%;
+	height: 400px;
+	padding: 2rem;
+	visibility: hidden;
+	transform: translateY(300px);
+	opacity: 0;
+	transition: all .4s ease;
+	background: linear-gradient(354deg, black 0%, transparent 72%);
+	color: white;
+	overflow: hidden;
+	}
+	.text {
+	position: absolute;
+	bottom: 5rem;
+	}
+	.active .text-container {
+	visibility: visible;
+	transform: translateY(0px);
+	opacity: 0;
+	}
+
+.navbar-default .mu-menu li a {
+	font-size: 14px;
+	margin: 10px 5px;
+}	
+
+.mu-primary-btn {
+	font-size: 14px;
+	padding: 12px 22px;
+}
+
+.mu-simplefilter li{
+	margin-bottom: 10px;
+}
+
+.mu-about-header,
+.mu-service-header,
+.mu-contact-header {
+	padding: 0;
+}
+	
+.mu-featured-area {
+	padding: 28% 5%;
+}
+.mu-about-content{
+	background-color:white;
+}
+
+.mu-about-content-left img{
+	width: 100%;
+}
+
+.mu-about-content-right {
+	margin-top: 50px;
+}
+
+.mu-filter-item-content {
+	padding-top: 18%;
+}
+
+.filtr-item h4 {
+	font-size: 16px;
+}
+
+.mu-testimonial-slide li.slick-slide,
+.mu-contact-content {
+	padding: 0 50px;
+}
+
+#mu-featured-slider {
+	background-attachment: fixed;
+	background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+	background-size:120%;
+	display: inline;
+	float: left;
+	
+			
+}
+}
+
+@media (max-width: 767px) {
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:15px;
+}
+
+.mu-header-dot{
+opacity:0;
+}
+.mu-about-header>p{
+	margin-top:10px;
+}
+
+#typed{
+	font-size:18px;
+}
+#typed>span{
+	font-size:18px;
+}
+.text>h3{
+	font-size:20px;
+}
+.text>p{
+	font-size:12px;
+}
+.mu-service-area
+{
+	padding:90px 0;
+}
+header{
+	height:60px;
+}
+
+
+.mu-featured-area h1{
+	font-size:40px;
+	margin-top:5px;
+}
+
+
+.mu-about-header>p{
+	font-size:11px;
+}
+.mu-about-header>h2
+{
+	font-size:30px;
+	margin-top:-25px;
+}
+.mu-heading-title{
+	margin-bottom:-20px;
+	font-size:30px;
+}
+.titleport{
+	font-family:'Alegreya Sans SC', sans-serif;
+	font-size:30px;
+	color:#339999;
+	text-align:center;
+}
+.portfolio {
+	display: flex; 
+	min-width: 200px;
+	max-width:600px;
+	height: 250px;
+	justify-content:center;
+	}
+	.mu-portfolio-area
+	{
+		padding:50px 0;
+	}
+	.mu-about-area
+	{
+		padding:50px 0;
+	}
+	.image {
+	min-width: 40px;
+	margin: 10px;
+	cursor: pointer;
+	transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+	overflow: hidden;
+	position: relative;
+	}
+	.image.active {
+	flex-grow: 100;
+	max-width: 600px;
+	margin: 0px;
+	border-radius: 7px;
+	}
+	.image:not(.active){
+	flex-grow: 1;
+	border-radius: 5px;
+	}
+	.text-container {
+	width: 100%;
+	height: 300px;
+	padding: 2rem;
+	visibility: hidden;
+	transform: translateY(300px);
+	opacity: 0;
+	transition: all .4s ease;
+	background: linear-gradient(354deg, black 0%, transparent 72%);
+	color: white;
+	overflow: hidden;
+	}
+	.text {
+	position: absolute;
+	bottom: 5rem;
+	}
+	.active .text-container {
+	visibility: visible;
+	transform: translateY(0px);
+	opacity: 1;
+	}
+.navbar-default .navbar-toggle {
+	border-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus{
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+	background-color:#593875;
+	text-align: center;
+}
+
+.navbar-default .mu-menu li a {
+	display: inline-block;
+}
+
+.mu-team-content .row > div {
+	width: 49.5%;
+	float: left;
+}
+
+.mu-testimonial-slide li {
+	padding: 0 15px;
+}
+
+.mu-filter-item-content {
+	padding-top: 25%;
+}
+
+.mu-contact-top-single {
+	margin-bottom: 25px;
+}
+
+#mu-featured-slider {
+	background-attachment: fixed;
+	background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+	background-size:160%;
+	display: inline;
+	float: left;
+	
+			
+}
+}
+
+
+@media (max-width: 640px){
+
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:12px;
+}
+
+
+#mu-header{
+	height:100px;
+}
+.mu-header-dot{
+opacity:0;
+}
+.mu-about-header>p{
+	margin-top:10px;
+}
+
+#typed{
+	font-size:18px;
+}
+#typed>span{
+	font-size:18px;
+}
+.text>h3{
+	font-size:20px;
+}
+.text>p{
+	font-size:12px;
+}
+.mu-service-area
+{
+	padding:90px 0;
+}
+
+
+
+.mu-featured-area h1{
+	font-size:30px;
+	margin-top:5px;
+}
+
+.mu-about-header>p{
+	font-size:12px;
+}
+.mu-about-header>h2
+{
+	font-size:30px;
+	margin-top:5px;
+}
+.mu-heading-title{
+	margin-bottom:-20px;
+	font-size:30px;
+}
+.titleport{
+	font-family:'Alegreya Sans SC', sans-serif;
+	color:#339999;
+	text-align:center;
+}
+.portfolio {
+	display: flex; 
+	min-width: 400px;
+	max-width: 600px;
+	height: 250px;
+	margin: 2rem auto;
+	}
+	.mu-portfolio-area
+	{
+		padding:50px 0;
+	}
+	.mu-about-area
+	{
+		padding:50px 0;
+	}
+	.image {
+	min-width: 60px;
+	margin: 10px;
+	cursor: pointer;
+	transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+	overflow: hidden;
+	position: relative;
+	}
+	.image.active {
+	flex-grow: 100;
+	max-width: 600px;
+	margin: 0px;
+	border-radius: 7px;
+	}
+	.image:not(.active){
+	flex-grow: 1;
+	border-radius: 5px;
+	}
+	.text-container {
+	width: 100%;
+	height: 250px;
+	padding: 2rem;
+	visibility: hidden;
+	transform: translateY(300px);
+	opacity: 0;
+	transition: all .4s ease;
+	background: linear-gradient(354deg, black 0%, transparent 72%);
+	color: white;
+	overflow: hidden;
+	}
+	.text {
+	position: absolute;
+	bottom: 5rem;
+	}
+	.active .text-container {
+	visibility: visible;
+	transform: translateY(0px);
+	opacity: 1;
+	}
+
+#mu-header.mu-fixed-nav {
+	padding: 10px 0;
+}
+
+.mu-featured-slider-content {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 30%;
+	padding: 0 10px;
+}
+
+.mu-featured-slider-content h2 {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.mu-featured-slider-content p {
+	font-size: 12px;
+}
+
+.mu-primary-btn {
+	font-size: 12px;
+	padding: 10px 12px;
+	margin-top: 15px;
+}
+
+.slick-dots {
+	bottom: 15px;
+}
+
+#mu-featured-slider {
+	background-attachment: fixed;
+	background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+	background-size:160%;
+	display: inline;
+	float: left;
+	
+			
+}
+		
+
+}
+
+
+@media (max-width: 480px) {
+
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:20px;
+	
+}
+
+#lol
+{
+	font-size:40px;
+}
+
+.titleport{
+	font-family:'Alegreya Sans SC', sans-serif;
+	font-size:25px;
+	color:#339999;
+	text-align:center;
+}
+.portfolio {
+	display: flex; 
+	min-width: 100px;
+	max-width: 200px;
+	height: 250px;
+	justify-content:center;
+	}
+	.mu-portfolio-area
+	{
+		padding:20px 0;
+	}
+	.mu-about-area
+	{
+		padding:50px 0;
+	}
+	.image {
+	min-width: 50px;
+	margin: 10px;
+	cursor: pointer;
+	transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+	overflow: hidden;
+	position: relative;
+	}
+	.image.active {
+	flex-grow: 100;
+	max-width: 600px;
+	margin: 0px;
+	border-radius: 7px;
+	}
+	.image:not(.active){
+	flex-grow: 1;
+	border-radius: 5px;
+	}
+	.text-container {
+	width: 100%;
+	height: 250px;
+	padding: 2rem;
+	visibility: hidden;
+	transform: translateY(300px);
+	opacity: 0;
+	transition: all .4s ease;
+	background: linear-gradient(354deg, black 0%, transparent 72%);
+	color: white;
+	overflow: hidden;
+	}
+	.text {
+	position: absolute;
+	bottom: 5rem;
+	}
+	.active .text-container {
+	visibility: visible;
+	transform: translateY(0px);
+	opacity: 0;
+	}
+
+
+
+#mu-header{
+	height:100px;
+}
+
+.mu-header-dot{
+opacity:0;
+}
+.mu-about-header>p{
+	margin-top:10px;
+}
+
+#typed{
+	font-size:12px;
+}
+#typed>span{
+	font-size:12px;
+}
+.text>h3{
+	font-size:20px;
+}
+.text>p{
+	font-size:12px;
+}
+.mu-service-area
+{
+	padding:90px 0;
+}
+
+#mu-header {
+	padding: 10px 0;
+}
+
+.navbar-default .navbar-brand, 
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+	font-size: 25px;
+	margin-top: 0px;
+}
+
+.navbar-toggle {
+	padding: 7px 8px;
+}
+
+.navbar-toggle .icon-bar {
+	width: 18px;
+}
+
+h2{
+	font-size: 25px;
+}
+
+.mu-heading-title {
+	margin-bottom: 10px;
+}
+
+.mu-about-content-single h4 {
+	margin-bottom: 18px;
+}
+
+.mu-simplefilter li {
+	padding: 1rem 1.3rem;
+	font-size: 14px;
+}
+
+.mu-team-social-info a {
+	width: 35px;
+	height: 35px;
+	font-size: 16px;
+	line-height: 35px;
+}
+
+.mu-contact-form button {
+	width: 100%;
+}
+
+.filtr-item h4 {
+	font-size: 14px;
+}
+
+.mu-featured-area h1 {
+	font-size: 30px;
+	margin-top:30px;
+}
+
+.mu-featured-slider p, 
+
+
+.mu-featured-content p {
+	font-size: 14px;
+}
+
+.mu-filter-item-content {
+	padding-top: 20%;
+}
+
+.mu-featured-area {
+	padding: 20% 5%;
+}
+
+#mu-featured-slider {
+	background-attachment: fixed;
+	background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+	background-size:160%;
+	display: inline;
+	float: left;
+	
+			
+}
+	
+.mu-featured-area
+{
+	margin-top:20px;
+}
+
+}
+
+
+@media (max-width: 360px){
+
+	
+#lol
+{
+	font-size:40px;
+}
+
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:20px;
+	
+}
+
+
+#mu-header{
+	height:100px;
+}
+.mu-featured-area
+{
+	margin-top:40px;
+}
+.mu-header-dot{
+opacity:0;
+}
+.mu-about-header>p{
+	margin-top:10px;
+}
+
+#typed{
+	font-size:10px;
+}
+#typed>span{
+	font-size:10px;
+}
+.text>h3{
+	font-size:20px;
+}
+.text>p{
+	font-size:12px;
+}
+.mu-featured-area h1{
+	font-size:23px;
+}
+.mu-service-area
+{
+	padding:90px 0;
+}
+
+.mu-featured-slider-content {
+	top: 49%;
+}
+
+.mu-featured-slider-content p,
+.mu-featured-slider-content .mu-primary-btn {
+	display: none;
+}
+
+.mu-featured-slider-content h2 {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.mu-filter-item-content {
+	padding-top: 25%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.filtr-item h4 {
+	font-size: 12px;
+}
+
+.mu-team-content .row > div {
+	width: 100%;
+}
+
+.mu-simplefilter li {
+	padding: 1rem 1rem;
+	font-size: 12px;
+}
+
+.mu-portfolio-content .col-xs-6 {
+	width: 100%;
+}
+
+.mu-testimonial-slide li.slick-slide, 
+.mu-contact-content {
+	padding: 0;
+}
+
+#mu-featured-slider {
+	background-attachment: fixed;
+	background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+	background-size:160%;
+	display: inline;
+	float: left;
+	
+			
+}
+
+
+}
+
+
+
+@media (max-width: 320px){
+
+	
+#lol
+{
+	font-size:35px;
+}
+
+.navbar-default .navbar-brand
+{
+	width:120px;
+}
+
+#logo
+{
+	
+	margin-top:20px;
+	
+}
+
+#mu-header{
+	height:100px;
+}
+.mu-header-dot{
+opacity:0;
+}
+.mu-about-header>p{
+	margin-top:10px;
+}
+
+#typed{
+	font-size:12px;
+}
+#typed>span{
+	font-size:12px;
+}
+.text>h3{
+	font-size:20px;
+}
+.text>p{
+	font-size:12px;
+}
+.mu-featured-area h1{
+	font-size:23px;
+}
+.mu-service-area
+{
+	padding:90px 0;
+}
+
+.mu-featured-slider-content {
+	top: 49%;
+}
+
+.mu-featured-slider-content p,
+.mu-featured-slider-content .mu-primary-btn {
+	display: none;
+}
+
+.mu-featured-slider-content h2 {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.mu-filter-item-content {
+	padding-top: 25%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.filtr-item h4 {
+	font-size: 12px;
+}
+
+.mu-team-content .row > div {
+	width: 100%;
+}
+
+.mu-simplefilter li {
+	padding: 1rem 1rem;
+	font-size: 12px;
+}
+
+.mu-portfolio-content .col-xs-6 {
+	width: 100%;
+}
+
+.mu-testimonial-slide li.slick-slide, 
+
+
+#mu-featured-slider {
+	background-attachment: fixed;
+	background-image:url(images/autoportrait_DORNSTETTER_Morgane@2x-100.png);
+	background-size:200%;
+	display: inline;
+	float: left;
+	
+			
+}
+
+.titleport{
+	font-family:'Alegreya Sans SC', sans-serif;
+	font-size:25px;
+	color:#339999;
+	text-align:center;
+}
+.portfolio {
+	display: flex; 
+	min-width: 80px;
+	max-width: 90px;
+	height: 250px;
+	justify-content:center;
+	}
+	.mu-portfolio-area
+	{
+		padding:10px 0;
+	}
+	.mu-about-area
+	{
+		padding:20px 0;
+	}
+	.image {
+	min-width: 45px;
+	margin: 4px;
+	cursor: pointer;
+	transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+	overflow: hidden;
+	position: relative;
+	}
+	.image.active {
+	flex-grow: 100;
+	max-width: 600px;
+	margin: 0px;
+	border-radius: 7px;
+	}
+	.image:not(.active){
+	flex-grow: 1;
+	border-radius: 5px;
+	}
+	.text-container {
+	width: 100%;
+	height: 250px;
+	padding: 2rem;
+	visibility: hidden;
+	transform: translateY(300px);
+	opacity: 0;
+	transition: all .4s ease;
+	background: linear-gradient(354deg, black 0%, transparent 72%);
+	color: white;
+	overflow: hidden;
+	}
+	.text {
+	position: absolute;
+	bottom: 5rem;
+	}
+	.active .text-container {
+	visibility: visible;
+	transform: translateY(0px);
+	opacity: 0;
+	}
+
+
+
+
+}
+
